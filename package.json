@@ -1,0 +1,24 @@
+{
+  "name": "dbf-dbmodels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MongoConnection.js",
+  "dependencies": {
+    "config": "^1.28.1",
+    "mongoose": "^4.13.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuoSoftware/DBF-DBModels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuoSoftware/DBF-DBModels/issues"
+  },
+  "homepage": "https://github.com/DuoSoftware/DBF-DBModels#readme"
+}
