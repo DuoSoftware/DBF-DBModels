@@ -60,5 +60,5 @@ module.exports.Bot = mongoose.model('Bot', botSchema);
 module.exports.FacebookChannel = mongoose.model('FacebookChannel', fbChannelSchema);
 module.exports.SlackChannel = mongoose.model('SlackChannel', slackChannelSchema);
 botAppSchema.index({ company: 1, tenant: 1, bot_id: 1, name: 1}, { unique: true });
-module.exports.BotApp = mongoose.model('BotAppSchema', botAppSchema);
+module.exports.BotApp = mongoose.model('BotApp', botAppSchema);
 
