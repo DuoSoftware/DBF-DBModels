@@ -7,7 +7,7 @@ var ObjectId = Schema.ObjectId;
 var quickReplyButtonSchema = new Schema({
     type: {type: String, enum: ['text', 'location'], default: 'text', required: true},
     title: String,
-        payload: String,
+    payload: String,
     image: String
 });
 
@@ -17,6 +17,7 @@ var quickReplySchema = new Schema({
     tenant: {type: Number, required: true},
     created_at: {type: Date, default: Date.now, require: true},
     updated_at: {type: Date, default: Date.now, require: true},
+    text: {type: String, required: false},
     items: [quickReplyButtonSchema]
 });
 
