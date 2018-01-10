@@ -35,7 +35,9 @@ var slackChannelSchema = new Schema({
     updated_at: {type:Date,default: Date.now,require:true},
     client_id: {type:String,require:true},
     client_secret: {type:String,require:true},
-    verification_token: {type:String,require:true}
+    verification_token: {type:String,require:true},
+    api_token: {type:String,require:true},
+    bot_token: {type:String,require:true}
 
 });
 
