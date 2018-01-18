@@ -140,7 +140,7 @@ var receiptCardSchema = new Schema({
     elements: [receiptElement]
 });
 
-module.exports.QuickReply = mongoose.model('Receipt', receiptCardSchema);
+module.exports.Receipt = mongoose.model('Receipt', receiptCardSchema);
 module.exports.QuickReply = mongoose.model('QuickReply', quickReplySchema);
 module.exports.ButtonList = mongoose.model('ButtonList', buttonListSchema);
 module.exports.Attachment = mongoose.model('Attachment', attachmentSchema);
