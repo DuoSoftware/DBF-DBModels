@@ -113,7 +113,7 @@ var receiptElement = new Schema({
     subtitle: {type:String},
     quantity: {type:Integer, default:1},
     price: {type:Double, required:true},
-    currency: {type:String, required:true}
+    currency: {type:String, required:true},
     image_url: {type:String}
 });
 
@@ -140,7 +140,7 @@ var receiptCardSchema = new Schema({
     elements: [receiptElement]
 });
 
-
+module.exports.QuickReply = mongoose.model('Receipt', receiptCardSchema);
 module.exports.QuickReply = mongoose.model('QuickReply', quickReplySchema);
 module.exports.ButtonList = mongoose.model('ButtonList', buttonListSchema);
 module.exports.Attachment = mongoose.model('Attachment', attachmentSchema);
