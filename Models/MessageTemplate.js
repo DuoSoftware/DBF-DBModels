@@ -104,15 +104,15 @@ var addressSchema = new Schema({
 
 var receiptAdjustmentSchema =  new Schema({
     description: {type:String, required:true},
-    amount: {type: Double, required:true }
+    amount: {type: Number, required:true }
 
 })
 
 var receiptElement = new Schema({
     title: {type:String, required:true},
     subtitle: {type:String},
-    quantity: {type:Integer, default:1},
-    price: {type:Double, required:true},
+    quantity: {type:Number, default:1},
+    price: {type:Number, required:true},
     currency: {type:String, required:true},
     image_url: {type:String}
 });
@@ -132,10 +132,10 @@ var receiptCardSchema = new Schema({
     shipping_address: addressSchema,
     adjustments: [receiptAdjustmentSchema],
     summary: {
-        sub_total: {type:Double},
-        shipping_cost: {type:Double},
-        total_tax: {type:Double},
-        total_cost: {type:Double}
+        sub_total: {type:Number},
+        shipping_cost: {type:Number},
+        total_tax: {type:Number},
+        total_cost: {type:Number}
     },
     elements: [receiptElement]
 });
