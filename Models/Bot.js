@@ -10,7 +10,9 @@ var botAppSchema = new Schema({
     bot_id:{type: ObjectId,ref: 'Bot'},
     app: {type:String,require:true},
     order:{ type: Number, required: true },
-    config: {}
+    config: {
+        typing: { type: Boolean,default:false, required: true }
+    }
 });
 
 
