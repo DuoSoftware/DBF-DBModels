@@ -37,3 +37,5 @@ var integrationSchema = new Schema({
         }
     }
 });
+
+module.exports.Integrations = mongoose.model('Integrations', integrationSchema);
