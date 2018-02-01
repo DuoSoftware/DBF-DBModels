@@ -13,6 +13,8 @@ var quickReplyButtonSchema = new Schema({
 
 
 var quickReplySchema = new Schema({
+    name: String,
+    description: String,
     company: {type: Number, required: true},
     tenant: {type: Number, required: true},
     created_at: {type: Date, default: Date.now, require: true},
@@ -32,6 +34,8 @@ var buttonSchema = new Schema({
 });
 
 var buttonListSchema = new Schema({
+    name: String,
+    description: String,
     type: {type: String, enum: ['card', 'normal'], default: 'normal', required: true},
     text: String,
     company: {type: Number, required: true},
@@ -43,6 +47,8 @@ var buttonListSchema = new Schema({
 
 
 var attachmentSchema = new Schema({
+    name: String,
+    description: String,
     company: {type: Number, required: true},
     tenant: {type: Number, required: true},
     created_at: {type: Date, default: Date.now, require: true},
@@ -80,6 +86,8 @@ var cardSchema = new Schema({
 });
 
 var mediaCardSchema = new Schema({
+    name: String,
+    description: String,
     company: {type: Number, required: true},
     tenant: {type: Number, required: true},
     created_at: {type: Date, default: Date.now, require: true},
