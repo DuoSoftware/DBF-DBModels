@@ -57,6 +57,8 @@ var attachmentSchema = new Schema({
 
 
 var cardSchema = new Schema({
+    name: String,
+    description: String,
     company: {type: Number, required: true},
     tenant: {type: Number, required: true},
     created_at: {type: Date, default: Date.now, require: true},
