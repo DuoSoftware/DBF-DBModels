@@ -14,4 +14,4 @@ VerificationScheme.methods.VerificationCompleted = function(){
     return this.verificationCompleted;
 }
 
-module.exports.Veridication = mongoose.model('Verification', VerificationScheme);
+module.exports.Verification = mongoose.model('Verification', VerificationScheme);
