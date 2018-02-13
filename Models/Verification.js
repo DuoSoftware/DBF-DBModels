@@ -5,6 +5,7 @@ var VerificationScheme = new Schema({
     verificationItem: String,
     type:String,
     verificationCode: String,
+    name: String,
     create_date: Date,
     verificationCompleted:Boolean
 });
