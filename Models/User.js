@@ -11,3 +11,7 @@ var userMapSchema = new Schema({
 
 });
 
+
+module.exports.Receipt = mongoose.model('userMap', userMapSchema);
+
+
