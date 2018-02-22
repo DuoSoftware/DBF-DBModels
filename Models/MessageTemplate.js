@@ -19,6 +19,7 @@ var quickReplySchema = new Schema({
     tenant: {type: Number, required: true},
     created_at: {type: Date, default: Date.now, require: true},
     updated_at: {type: Date, default: Date.now, require: true},
+    contentType: {type: String, enum: ['static', 'dynamic'], default: 'static', required: true},
     text: {type: String, required: false},
     items: [quickReplyButtonSchema]
 });
@@ -70,6 +71,7 @@ var cardSchema = new Schema({
     created_at: {type: Date, default: Date.now, require: true},
     updated_at: {type: Date, default: Date.now, require: true},
     type: {type: String, enum: ['generic', 'list'], default: 'generic', required: true},
+    contentType: {type: String, enum: ['static', 'dynamic'], default: 'static', required: true},
     items: [
         {
             title: String,
