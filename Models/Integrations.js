@@ -7,6 +7,7 @@ var integrationSchema = new Schema({
     tenant: {type: Number, required: true},
     created_at: {type: Date, default: Date.now, require: true},
     updated_at: {type: Date, default: Date.now, require: true},
+    name: {type: String, required: true},
     url: {type: String, required: true},
     method: {type: String, required:true},
     url_params: {},
