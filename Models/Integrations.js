@@ -16,8 +16,9 @@ var integrationSchema = new Schema({
     response: {
         error:{
             http_code:{type: String, required:true},
-            out_message_field: {type: String, required:false},
-            check__fields: [
+            out_message_field: {type: String, required:true},
+            fieldCheckCondition: {type: String, enum: ['and', 'or'], default: 'and', required: true},
+            check_fields: [
                 {
                     name: {type: String, required:false},
                     type: {type: String, required:false},
@@ -27,8 +28,9 @@ var integrationSchema = new Schema({
         },
         success:{
             http_code:{type: String, required:true},
-            out_message_field: {type: String, required:false},
-            check__fields: [
+            out_message_field: {type: String, required:true},
+            fieldCheckCondition: {type: String, enum: ['and', 'or'], default: 'and', required: true},
+            check_fields: [
                 {
                     name: {type: String, required:false},
                     type: {type: String, required:false},
