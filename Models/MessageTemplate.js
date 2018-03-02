@@ -165,7 +165,7 @@ var persistMenuItemSchema = new Schema({
     type: {type: String, enum: ['web_url', 'postback', 'nested'], required: true},
     payload: {type: String, required: false},
     url: {type: String, required: false},
-    actions: {type: [persistMenuItemSchema], required: false}
+    actions: [persistMenuItemSchema]
 });
 
 
@@ -176,6 +176,6 @@ module.exports.ButtonList = mongoose.model('ButtonList', buttonListSchema);
 module.exports.Attachment = mongoose.model('Attachment', attachmentSchema);
 module.exports.Card = mongoose.model('Card', cardSchema);
 module.exports.MediaCard = mongoose.model('MediaCard', mediaCardSchema);
-
+module.exports.MediaCard = mongoose.model('PersistMenu', persistMenuSchema);
 
 
