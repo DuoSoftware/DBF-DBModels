@@ -176,6 +176,6 @@ module.exports.ButtonList = mongoose.model('ButtonList', buttonListSchema);
 module.exports.Attachment = mongoose.model('Attachment', attachmentSchema);
 module.exports.Card = mongoose.model('Card', cardSchema);
 module.exports.MediaCard = mongoose.model('MediaCard', mediaCardSchema);
-module.exports.MediaCard = mongoose.model('PersistMenu', persistMenuSchema);
+module.exports.PersistMenu = mongoose.model('PersistMenu', persistMenuSchema);
 
 
