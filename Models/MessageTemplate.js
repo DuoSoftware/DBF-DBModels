@@ -152,6 +152,24 @@ var receiptCardSchema = new Schema({
     elements: [receiptElement]
 });
 
+var persistMenuSchema = new Schema({
+    locale: {type: String, required: true},
+    composer_input_disabled: {type: Boolean, required: true},
+    created_at: {type: Date, default: Date.now, require: true},
+    updated_at: {type: Date, default: Date.now, require: true},
+    actions: [persistMenuItemSchema],
+});
+
+var persistMenuItemSchema = new Schema({
+    title: {type: String, required: true},
+    type: {type: String, enum: ['web_url', 'postback', 'nested'], required: true},
+    payload: {type: String, required: false},
+    url: {type: String, required: false},
+    actions: {type: [persistMenuItemSchema], required: false}
+});
+
+
+
 module.exports.Receipt = mongoose.model('Receipt', receiptCardSchema);
 module.exports.QuickReply = mongoose.model('QuickReply', quickReplySchema);
 module.exports.ButtonList = mongoose.model('ButtonList', buttonListSchema);
