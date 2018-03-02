@@ -157,15 +157,7 @@ var persistMenuSchema = new Schema({
     composer_input_disabled: {type: Boolean, required: true},
     created_at: {type: Date, default: Date.now, require: true},
     updated_at: {type: Date, default: Date.now, require: true},
-    actions: [persistMenuItemSchema],
-});
-
-var persistMenuItemSchema = new Schema({
-    title: {type: String, required: true},
-    type: {type: String, enum: ['web_url', 'postback', 'nested'], required: true},
-    payload: {type: String, required: false},
-    url: {type: String, required: false},
-    actions: [persistMenuItemSchema]
+    call_to_actions: {},
 });
 
 
