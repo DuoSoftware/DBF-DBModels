@@ -10,4 +10,7 @@ var aiWorkFlowMapScheme = new Schema({
 });
 
 
+aiWorkFlowMapScheme.index({ "company": 1, "tenant": 1, "workFlowName": 1}, { "unique": true });
+
+
 module.exports.aiWorkFlowMap = mongoose.model('aiWorkFlowMap', aiWorkFlowMapScheme);
