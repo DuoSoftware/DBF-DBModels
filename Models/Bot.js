@@ -53,6 +53,7 @@ var botSchema = new Schema({
     updated_at: {type:Date,default: Date.now,require:true},
     screen_name: {type: String, required: true},
     status:{type: Boolean, required: true},
+    description: {type: String},
     channel_facebook: fbChannelSchema,
     channel_slack: slackChannelSchema,
     avatar: String
