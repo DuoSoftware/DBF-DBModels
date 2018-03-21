@@ -4,6 +4,8 @@ var Schema = mongoose.Schema;
 var aiWorkFlowMapScheme = new Schema({
     company: {type: Number, required: true},
     tenant: {type: Number, required: true},
+    created_at: {type:Date,default: Date.now,require:true},
+    updated_at: {type:Date,default: Date.now,require:true},
     workFlowName: {type:String,require:true},
     events:{ type : Array , "default" : [] },
     enable: Boolean
