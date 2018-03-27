@@ -9,6 +9,7 @@ var aiWorkFlowMapScheme = new Schema({
     ruleName: {type:String,require:true, unique: true},
     description: {type:String},
     workFlowName: {type:String,require:true},
+    botAppId: {type:String,require:true},
     events:{ type : Array , "default" : [] },
     enable: Boolean
 });
