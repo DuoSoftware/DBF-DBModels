@@ -13,6 +13,7 @@ var botAppSchema = new Schema({
     config: {
         Securitykey: { type: String, required: true }
     }
+
 });
 
 
@@ -56,6 +57,11 @@ var botSchema = new Schema({
     description: {type: String},
     channel_facebook: fbChannelSchema,
     channel_slack: slackChannelSchema,
+    ai:{
+        name : {type: String,default: 'default',require:true},
+        key: {type: String},
+        description: {type: String}
+    },
     avatar: String
 });
 
