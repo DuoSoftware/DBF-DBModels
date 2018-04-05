@@ -9,7 +9,7 @@ var keyScheme = new Schema({
     keyName: {type:String,require:true},
     key: {type:String,require:true},
     description: {type:String},
-    enable: Boolean
+    enable: { type : Boolean , "default" : true }
 });
 
 keyScheme.index({ "company": 1, "tenant": 1, "keyName": 1}, { "unique": true });
