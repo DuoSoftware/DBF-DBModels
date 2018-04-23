@@ -62,6 +62,7 @@ var botSchema = new Schema({
         key: {type: String},
         description: {type: String}
     },
+    entities :{ type : Array , "default" : [] },
     avatar: String
 });
 
