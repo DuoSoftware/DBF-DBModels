@@ -7,7 +7,7 @@ var entityScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     entityName: {type:String,require:true},
-    events:{ type : Array , "default" : [] },
+    values:{ type : Array , "default" : [] },
     description: {type:String},
     enable: Boolean
 });
