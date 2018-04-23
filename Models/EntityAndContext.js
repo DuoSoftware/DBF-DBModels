@@ -12,7 +12,7 @@ var entityScheme = new Schema({
 });
 
 
-aiWorkFlowMapScheme.index({ "company": 1, "tenant": 1, "entityName": 1}, { "unique": true });
+entityScheme.index({ "company": 1, "tenant": 1, "entityName": 1}, { "unique": true });
 
 
 module.exports.entityMap = mongoose.model('entityMap', entityScheme);
