@@ -31,6 +31,8 @@ var contextScheme = new Schema({
     enable: { type : Boolean , default : true }
 });
 
+contextScheme.index({ "company": 1, "tenant": 1, "workflowName": 1, "bot_id" : 1}, { "unique": true });
+
 
 module.exports.entityMap = mongoose.model('entityMap', entityScheme);
 module.exports.contextMap = mongoose.model('contextMap', contextScheme);
