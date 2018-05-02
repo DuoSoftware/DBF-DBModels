@@ -22,6 +22,7 @@ var contextScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     workflowName: {type:String,require:true},
+    displayName: {type:String,require:true},
     contextMapping:[{
         entityName: {type:String,require:true},
         contextName: {type:String,require:true}
