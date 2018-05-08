@@ -62,6 +62,7 @@ var botSchema = new Schema({
         key: {type: String},
         description: {type: String}
     },
+    entities :{ type : Array , "default" : [] },
     aws : {
         "accessKeyId": {type: String, default: 'n/a',require:true},
         "secretAccessKey": {type: String, default: 'n/a',require:true},
