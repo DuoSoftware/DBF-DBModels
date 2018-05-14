@@ -24,6 +24,7 @@ var contextScheme = new Schema({
     workflowName: {type:String,require:true},
     displayName: {type:String,require:true},
     contextMapping:[{
+        entityID: {type:String,require:true},
         entityName: {type:String,require:true},
         contextName: {type:String,require:true}
     }] ,
@@ -32,7 +33,7 @@ var contextScheme = new Schema({
 });
 
 
-contextScheme.index({ "company": 1, "tenant": 1, "workflowName": 1}, { "unique": true });
+//contextScheme.index({ "company": 1, "tenant": 1, "workflowName": 1}, { "unique": true });
 
 
 module.exports.entityMap = mongoose.model('entityMap', entityScheme);
