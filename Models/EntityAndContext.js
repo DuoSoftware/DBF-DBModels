@@ -14,7 +14,7 @@ var entityScheme = new Schema({
 });
 
 
-entityScheme.index({ "company": 1, "tenant": 1, "entityName": 1}, { "unique": true });
+entityScheme.index({ "company": 1, "tenant": 1, "displayName": 1}, { "unique": true });
 
 
 var contextScheme = new Schema({
