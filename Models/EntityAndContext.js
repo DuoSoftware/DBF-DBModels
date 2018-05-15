@@ -6,6 +6,7 @@ var entityScheme = new Schema({
     tenant: {type: Number, required: true},
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
+    displayName: {type:String,require:true},
     entityName: {type:String,require:true},
     values:{ type : Array , "default" : [] },
     description: {type:String},
@@ -24,6 +25,7 @@ var contextScheme = new Schema({
     workflowName: {type:String,require:true},
     displayName: {type:String,require:true},
     contextMapping:[{
+        displayName: {type:String,require:true},
         entityID: {type:String,require:true},
         entityName: {type:String,require:true},
         contextName: {type:String,require:true}
