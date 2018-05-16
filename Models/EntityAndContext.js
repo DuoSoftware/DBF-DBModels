@@ -28,7 +28,8 @@ var contextScheme = new Schema({
         displayName: {type:String,require:true},
         entityID: {type:String,require:true},
         entityName: {type:String,require:true},
-        contextName: {type:String,require:true}
+        contextName: {type:String,require:true},
+        entityObj : {}
     }] ,
     description: {type:String},
     enable: { type : Boolean , default : true }
