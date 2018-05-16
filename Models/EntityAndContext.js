@@ -26,7 +26,7 @@ var contextScheme = new Schema({
     displayName: {type:String,require:true},
     contextMapping:[{
         displayName: {type:String,require:true},
-        entityID: {type:String,require:true},
+        entityId: {type:String,require:true},
         entityName: {type:String,require:true},
         contextName: {type:String,require:true},
         entityObj : {}
