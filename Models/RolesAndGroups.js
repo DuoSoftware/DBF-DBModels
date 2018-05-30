@@ -10,7 +10,10 @@ var rolesScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     roleName: {type:String,require:true},
-    permissions:{ type : Array , "default" : [] },
+    permissions:{
+        permissionName: {type:String,require:true},
+        permissionObj : {}
+    },
     description: {type:String},
     enable: { type : Boolean , default : true }
 });
