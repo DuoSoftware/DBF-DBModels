@@ -10,10 +10,10 @@ var rolesScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     roleName: {type:String,require:true},
-    permissions:{
-        permissionName: {type:String,require:true},
-        permissionObj : {}
-    },
+    permissions:[{
+        permissionName: {type: String},
+        permissionObj: {}
+    }],
     description: {type:String},
     enable: { type : Boolean , default : true }
 });
@@ -27,7 +27,10 @@ var groupScheme = new Schema({
     groupName: {type:String,require:true},
     roleName: {type:String,require:true},
     roleId: {type:String,require:true},
-    users:{ type : Array , "default" : [] },
+    users:[{
+        permissionName: {type: String},
+        permissionObj: {}
+    }],
     description: {type:String},
     enable: { type : Boolean , default : true }
 });
@@ -40,8 +43,14 @@ var userScheme = new Schema({
     updated_at: {type:Date,default: Date.now,require:true},
     userName: {type:String,require:true},
     email: {type:String,require:true},
-    roles: { type : Array , "default" : [] },
-    groups: { type : Array , "default" : [] },
+    roles: [{
+        roleId: {type: String},
+        roleName: {type: String}
+    }],
+    groups:  [{
+        groupId: {type: String},
+        groupName: {type: String}
+    }],
     description: {type:String},
     enable: { type : Boolean , default : true }
 });
