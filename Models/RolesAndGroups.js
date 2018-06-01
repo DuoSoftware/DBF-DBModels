@@ -1,7 +1,8 @@
 /**
  * Created by vmkde on 5/30/2018.
  */
-
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 
 var rolesScheme = new Schema({
