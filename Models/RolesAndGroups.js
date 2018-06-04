@@ -30,7 +30,7 @@ var groupScheme = new Schema({
     roleId: {type:String,require:true},
     users:[{
         email: {type: String},
-        userId: {}
+        userId: {type: String}
     }],
     description: {type:String},
     enable: { type : Boolean , default : true }
