@@ -29,8 +29,8 @@ var groupScheme = new Schema({
     roleName: {type:String,require:true},
     roleId: {type:String,require:true},
     users:[{
-        permissionName: {type: String},
-        permissionObj: {}
+        email: {type: String},
+        userId: {}
     }],
     description: {type:String},
     enable: { type : Boolean , default : true }
