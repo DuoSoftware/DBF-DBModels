@@ -25,4 +25,6 @@ var authMetaDataSchema = new Schema({
     imageUrl: {type: String, default: 'http://smoothflow.io/app/images/smoothflowlogo.png', required: true}
 });
 
+authMetaDataSchema.index({ "company": 1, "tenant": 1}, { "unique": true });
+
 module.exports.AuthMetaData = mongoose.model('AuthMetaData', authMetaDataSchema);
