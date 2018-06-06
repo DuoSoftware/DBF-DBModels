@@ -20,7 +20,9 @@ var authMetaDataSchema = new Schema({
         custom: {
             publicKeyUrl: {type: String}
         }
-    }
+    },
+    displayName: {type: String, default: 'n/a', required: true},
+    imageUrl: {type: String, default: 'http://smoothflow.io/app/images/smoothflowlogo.png', required: true}
 });
 
 module.exports.AuthMetaData = mongoose.model('AuthMetaData', authMetaDataSchema);
