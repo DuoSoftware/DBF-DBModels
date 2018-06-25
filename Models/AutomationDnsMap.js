@@ -11,6 +11,8 @@ var AutomationDnsMapScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     workflowName: {type:String,require:true},
+    deploymentType : {type:String,require:true},
+    environment : {type:String,require:true},
     remoteUrl: {type:String,require:true},
     proxyUrl: {type:String,require:true},
     user: {type:String,require:true},
