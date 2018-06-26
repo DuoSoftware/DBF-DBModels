@@ -16,7 +16,9 @@ var AutomationDnsMapScheme = new Schema({
     remoteUrl: {type:String,require:true},
     proxyUrl: {type:String,require:true},
     user: {type:String,require:true},
+    apiKey:{type:String},
     enable: { type : Boolean , default : true }
+
 
 });
 
