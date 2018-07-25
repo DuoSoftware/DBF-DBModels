@@ -11,6 +11,7 @@ var serverRegistryScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     deploymentType : {type:String,require:true},
+    deployedWorkFlows:{type:Array},
     serverName: {type:String},
     environment : {type:String,require:true},
     remoteUrl: {type:String,require:true},

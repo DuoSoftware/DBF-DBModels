@@ -12,6 +12,7 @@ var rolesScheme = new Schema({
     updated_at: {type:Date,default: Date.now,require:true},
     roleName: {type:String,require:true},
     permissions:[{
+        permissionDisplayName : {type: String},
         permissionName: {type: String},
         permissionObj: {}
     }],
