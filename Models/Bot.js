@@ -55,6 +55,7 @@ var botSchema = new Schema({
     screen_name: {type: String, required: true},
     status:{type: Boolean, required: true},
     description: {type: String},
+    type:{type: String},
     channel_facebook: fbChannelSchema,
     channel_slack: slackChannelSchema,
     ai:{
