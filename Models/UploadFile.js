@@ -6,6 +6,7 @@ var uploadFileSchema = new Schema({
     tenant: {type: Number, required: true},
     name: {type: String, default:'unspecified', required: true},
     url: {type: String, required: true},
+    folderPath: {type: String, required: true},
     // date:{type:Date, default: Date.now, require:true},
     size:{type: Number, required: true},
     type:{type: String, required: true},
