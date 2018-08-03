@@ -44,6 +44,8 @@ var userScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     userName: {type:String,require:true},
+    botUser:{ type : Boolean , default : false},
+    bot:  {type:String},
     email: {type:String,require:true},
     roles: [{
         roleId: {type: String},
