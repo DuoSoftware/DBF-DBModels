@@ -46,6 +46,7 @@ var userScheme = new Schema({
     userName: {type:String,require:true},
     botUser:{ type : Boolean , default : false},
     bot:  {type:String},
+    botUniqueId:  {type:String},
     email: {type:String,require:true},
     roles: [{
         roleId: {type: String},
