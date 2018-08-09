@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var createFolderSchema = new Schema({
+var folderSchema = new Schema({
     company: {type: Number, required: true},
     tenant: {type: Number, required: true},
     name: {type: String, default:'unspecified', required: true},
@@ -18,4 +18,4 @@ var createFolderSchema = new Schema({
 
 
 
-module.exports.CreateFolder = mongoose.model('CreateFolder', createFolderSchema);
+module.exports.Folder = mongoose.model('Folder', folderSchema);
