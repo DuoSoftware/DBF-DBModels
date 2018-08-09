@@ -6,7 +6,7 @@ var folderSchema = new Schema({
     tenant: {type: Number, required: true},
     name: {type: String, default:'unspecified', required: true},
     url: {type: String, required: true},
-    folderPath: {type: String, required: true},
+    folderPath: {type: String},
     // date:{type:Date, default: Date.now, require:true},
     size:{type: Number},
     type:{type: String, required: true},
