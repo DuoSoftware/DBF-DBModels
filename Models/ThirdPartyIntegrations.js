@@ -21,4 +21,4 @@ var userIntegrationScheme = new Schema({
 userIntegrationScheme.index({ "company": 1, "tenant": 1, "integrationName": 1}, { "unique": true });
 
 
-module.exports.userIntegrationScheme = mongoose.model('userIntegrationScheme', userIntegrationScheme);
+module.exports.userIntegration = mongoose.model('userIntegration', userIntegrationScheme);
