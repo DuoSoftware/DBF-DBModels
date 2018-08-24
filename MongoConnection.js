@@ -11,12 +11,20 @@ module.exports = class MongooseConnection {
         this.mongouser=config.Mongo.user;
         this.mongopass = config.Mongo.password;
         this.mongoreplicaset= config.Mongo.replicaset;
+        this.cloudatlas= false;
+
+        if(config.Mongo.cloudAtlas){
+            this.cloudatlas = config.Mongo.cloudAtlas;
+        }
 
         let connectionstring = '';
         let _mongoip = this.mongoip.split(',');
         if(Array.isArray(_mongoip)){
 
-            if(_mongoip.length > 1){
+            if(this.cloudatlas === true ||this.cloudatlas === 'true' ){
+                connectionstring = util.format('mongodb+srv://%s:%s@%s',this.mongouser,this.mongopass,this.mongoip)
+            }
+            else if(_mongoip.length > 1){
 
                 _mongoip.forEach(function(item){
                     connectionstring += util.format('%s:%d,',item,this.mongoport)
@@ -28,7 +36,10 @@ module.exports = class MongooseConnection {
                 if(this.mongoreplicaset){
                     connectionstring = util.format('%s?replicaSet=%s',connectionstring,this.mongoreplicaset) ;
                 }
-            }else{
+
+
+            }
+            else{
 
                 connectionstring = util.format('mongodb://%s:%s@%s:%d/%s',this.mongouser,this.mongopass,_mongoip[0],this.mongoport,this.mongodb)
             }
@@ -38,9 +49,8 @@ module.exports = class MongooseConnection {
             connectionstring = util.format('mongodb://%s:%s@%s:%d/%s',this.mongouser,this.mongopass,this.mongoip,this.mongoport,this.mongodb)
         }
 
-        mongoose.connect(connectionstring,{
-            useMongoClient: true,
-            autoReconnect :true});
+
+        mongoose.connect(connectionstring,{useNewUrlParser: true,autoReconnect :true});
 
     }
 

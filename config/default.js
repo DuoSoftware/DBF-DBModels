@@ -6,6 +6,7 @@ module.exports = {
             "port": "27017",
             "dbname": "dvpdb",
             "password": "DuoS123",
-            "user": "duo"
+            "user": "duo",
+            "cloudAtlas": true
         }
 };

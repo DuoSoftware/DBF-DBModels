@@ -1,11 +1,11 @@
 {
   "name": "dbf-dbmodels",
-  "version": "1.0.82",
+  "version": "1.0.83",
   "description": "",
   "main": "MongoConnection.js",
   "dependencies": {
     "config": "^1.28.1",
-    "mongoose": "^4.13.7"
+    "mongoose": "^5.2.8"
   },
   "devDependencies": {},
   "scripts": {
