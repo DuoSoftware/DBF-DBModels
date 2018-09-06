@@ -12,6 +12,7 @@ var uploadFileSchema = new Schema({
     type:{type: String, required: true},
     width:{type: Number, required: false},
     height:{type: Number, required: false},
+    contentType:{type: String, default:'', required: false},
     created_at: {type:Date, default: Date.now, require:true},
     updated_at: {type:Date, default: Date.now, require:true}
 });
