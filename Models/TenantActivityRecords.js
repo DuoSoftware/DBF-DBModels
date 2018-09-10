@@ -6,8 +6,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var TenantActivityRecordsScheme = new Schema({
-    name: {type: String, required: true},
-    user: {type: String, required: true},
+    tenant: {type: String, required: true},
+    company: {type: String, required: true},
     activity_name: {type: String, required: true},
     reviewed: {type: Boolean, required: true, default: false},
     state: {type: String},

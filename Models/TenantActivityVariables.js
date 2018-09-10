@@ -7,8 +7,8 @@ var Schema = mongoose.Schema;
 
                     
 var TenantActivityVariablesScheme = new Schema({
-    name: {type: String},
-    user: {type: String},
+    tenant: {type: String, required: true},
+    company: {type: String, required: true},
     activity_name: {type: String},
     key: {type: String},
     display_name: {type: String},
