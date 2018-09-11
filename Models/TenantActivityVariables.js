@@ -22,7 +22,9 @@ var TenantActivityVariablesScheme = new Schema({
     priority: {type: String},
     advance: {type: String},
     control: {type: String},
-    placeholder: {type: String}
+    placeholder: {type: String},
+    created_at: {type:Date,default: Date.now,require:true},
+    updated_at: {type:Date,default: Date.now,require:true}
 });
 
 module.exports.tenantactivityvariables = mongoose.model('tenantactivityvariables', TenantActivityVariablesScheme);
