@@ -21,4 +21,6 @@ var TenantActivityRecordsScheme = new Schema({
 
 });
 
+TenantActivityRecordsScheme.index({"activity_name": "1"}, {"unique": true});
+
 module.exports.tenantactivityrecords = mongoose.model('tenantactivityrecords', TenantActivityRecordsScheme);

@@ -9,9 +9,9 @@ var Schema = mongoose.Schema;
 var TenantActivityVariablesScheme = new Schema({
     tenant: {type: String, required: true},
     company: {type: String, required: true},
-    activity_name: {type: String},
-    key: {type: String},
-    display_name: {type: String},
+    activity_name: {type: String, required: true},
+    key: {type: String, required: true},
+    display_name: {type: String, required: true},
     value: {type: String},
     value_list: {type: Array},
     api_method: {type: String},
@@ -26,5 +26,7 @@ var TenantActivityVariablesScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true}
 });
+
+TenantActivityVariablesScheme.index({"key": "1"}, {"unique": true});
 
 module.exports.tenantactivityvariables = mongoose.model('tenantactivityvariables', TenantActivityVariablesScheme);

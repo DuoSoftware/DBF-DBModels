@@ -16,4 +16,6 @@ var TenantActivityScheme = new Schema({
     updated_at: {type: Date, default: Date.now,require:true}
 });
 
+TenantActivityScheme.index({"company": 1, "tenant": 1}, {"unique": true});
+
 module.exports.tenantactivity = mongoose.model('tenantactivity', TenantActivityScheme);
