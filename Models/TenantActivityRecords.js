@@ -6,8 +6,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var TenantActivityRecordsScheme = new Schema({
-    tenant: {type: String, required: true},
     company: {type: String, required: true},
+    tenant: {type: String, required: true},
+    tenant_name: {type: String, required: true},
     activity_name: {type: String, required: true},
     description: {type: String},
     features: {type: Array},
@@ -29,8 +30,9 @@ var TenantActivityRecordsScheme = new Schema({
 });
 
 var TenantActivityVariablesScheme = new Schema({
-    tenant: {type: String, required: true},
     company: {type: String, required: true},
+    tenant: {type: String, required: true},
+    tenant_name: {type: String, required: true},
     activity_name: {type: String, required: true},
     key: {type: String, required: true},
     display_name: {type: String, required: true},
@@ -50,8 +52,9 @@ var TenantActivityVariablesScheme = new Schema({
 });
 
 var TenantActivityLanguagesScheme = new Schema({
-    tenant: {type: String, required: true},
     company: {type: String, required: true},
+    tenant: {type: String, required: true},
+    tenant_name: {type: String, required: true},
     activity_name: {type: String, required: true},
     language: {type: String, required: true},
     created_at: {type:Date, default: Date.now, require:true},
@@ -59,8 +62,9 @@ var TenantActivityLanguagesScheme = new Schema({
 });
 
 var TenantActivityTagsScheme = new Schema({
-    tenant: {type: String, required: true},
     company: {type: String, required: true},
+    tenant: {type: String, required: true},
+    tenant_name: {type: String, required: true},
     activity_name: {type: String, required: true},
     tag: {type: String, required: true},
     created_at: {type:Date, default: Date.now, require:true},
@@ -68,10 +72,11 @@ var TenantActivityTagsScheme = new Schema({
 });
 
 var TenantActivityPricingScheme = new Schema({
-    tenant: {type: String, required: true},
     company: {type: String, required: true},
+    tenant: {type: String, required: true},
+    tenant_name: {type: String, required: true},
     activity_name: {type: String, required: true},
-    name: {type: String},
+    pricing_name: {type: String, required: true},
     pricing_fts: {type: Array},
     price: {type: String, default: 0},
     bill_cycle: {type: String},
