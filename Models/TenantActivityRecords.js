@@ -11,6 +11,7 @@ var TenantActivityRecordsScheme = new Schema({
     activity_name: {type: String, required: true},
     description: {type: String},
     features: {type: Array},
+    languages: {type: Array},
     tags: {type: Array},
     what_you_get: {type: Array},
     pricing: {type: Array},
@@ -48,6 +49,15 @@ var TenantActivityVariablesScheme = new Schema({
     updated_at: {type:Date, default: Date.now, require:true}
 });
 
+var TenantActivityLanguagesScheme = new Schema({
+    tenant: {type: String, required: true},
+    company: {type: String, required: true},
+    activity_name: {type: String, required: true},
+    language: {type: String, required: true},
+    created_at: {type:Date, default: Date.now, require:true},
+    updated_at: {type:Date, default: Date.now, require:true}
+});
+
 var TenantActivityTagsScheme = new Schema({
     tenant: {type: String, required: true},
     company: {type: String, required: true},
@@ -72,5 +82,6 @@ var TenantActivityPricingScheme = new Schema({
 
 module.exports.tenantactivityrecords = mongoose.model('tenantactivityrecords', TenantActivityRecordsScheme);
 module.exports.tenantactivityvariables = mongoose.model('tenantactivityvariables', TenantActivityVariablesScheme);
+module.exports.tenantactivitylanguages = mongoose.model('tenantactivitylanguages', TenantActivityLanguagesScheme);
 module.exports.tenantactivitytags = mongoose.model('tenantactivitytags', TenantActivityTagsScheme);
 module.exports.tenantactivitypricings = mongoose.model('tenantactivitypricings', TenantActivityPricingScheme);
