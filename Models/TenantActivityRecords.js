@@ -6,81 +6,80 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var TenantActivityRecordsScheme = new Schema({
-    company: {type: String, required: true},
-    tenant: {type: String, required: true},
-    tenant_name: {type: String, required: true},
     activity_name: {type: String, required: true},
+    company: {type: String, required: true},
+    created_at: {type:Date, default: Date.now, require:true},
     description: {type: String},
+    faq: {type: Array},
     features: {type: Array},
     languages: {type: Array},
-    tags: {type: Array},
-    what_you_get: {type: Array},
-    pricing: {type: Array},
-    faq: {type: Array},
-    reviewed: {type: Boolean, required: true, default: false},
-    state: {type: String},
-    type: {type: String},
-    path: {type: String},
     npm_module: {type: String},
     npm_version: {type: String},
+    path: {type: String},
+    pricing: {type: Array},
+    reviewed: {type: Boolean, required: true, default: false},
+    state: {type: String},
+    tags: {type: Array},
+    tenant: {type: String, required: true},
+    tenant_name: {type: String, required: true},
+    type: {type: String},
+    updated_at: {type:Date, default: Date.now, require:true},
     variables: {type: Array},
-    created_at: {type:Date, default: Date.now, require:true},
-    updated_at: {type:Date, default: Date.now, require:true}
-
+    what_you_get: {type: Array}
 });
 
 var TenantActivityVariablesScheme = new Schema({
+    activity_name: {type: String, required: true},
+    advance: {type: String},
+    api_method: {type: String},
+    category: {type: String},
     company: {type: String, required: true},
+    control: {type: String},
+    created_at: {type:Date, default: Date.now, require:true},
+    data_type: {type: String},
+    display_name: {type: String, required: true},
+    group: {type: String},
+    key: {type: String, required: true},
+    priority: {type: String},
+    placeholder: {type: String},
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
-    activity_name: {type: String, required: true},
-    key: {type: String, required: true},
-    display_name: {type: String, required: true},
-    value: {type: String},
-    value_list: {type: Array},
-    api_method: {type: String},
     type: {type: String},
-    category: {type: String},
-    data_type: {type: String},
-    group: {type: String},
-    priority: {type: String},
-    advance: {type: String},
-    control: {type: String},
-    placeholder: {type: String},
-    created_at: {type:Date, default: Date.now, require:true},
-    updated_at: {type:Date, default: Date.now, require:true}
+    updated_at: {type:Date, default: Date.now, require:true},
+    value: {type: String},
+    value_list: {type: Array}
 });
 
 var TenantActivityLanguagesScheme = new Schema({
+    activity_name: {type: String, required: true},
     company: {type: String, required: true},
+    created_at: {type:Date, default: Date.now, require:true},
+    language: {type: String, required: true},
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
-    activity_name: {type: String, required: true},
-    language: {type: String, required: true},
-    created_at: {type:Date, default: Date.now, require:true},
     updated_at: {type:Date, default: Date.now, require:true}
 });
 
 var TenantActivityTagsScheme = new Schema({
+    activity_name: {type: String, required: true},
     company: {type: String, required: true},
+    created_at: {type:Date, default: Date.now, require:true},
+    tag: {type: String, required: true},
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
-    activity_name: {type: String, required: true},
-    tag: {type: String, required: true},
-    created_at: {type:Date, default: Date.now, require:true},
     updated_at: {type:Date, default: Date.now, require:true}
 });
 
 var TenantActivityPricingScheme = new Schema({
+    activity_name: {type: String, required: true},
+    bill_cycle: {type: String},
     company: {type: String, required: true},
+    created_at: {type:Date, default: Date.now, require:true},
+    price: {type: String, default: 0},
+    pricing_fts: {type: Array},
+    pricing_name: {type: String, required: true},
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
-    activity_name: {type: String, required: true},
-    pricing_name: {type: String, required: true},
-    pricing_fts: {type: Array},
-    price: {type: String, default: 0},
-    bill_cycle: {type: String},
-    created_at: {type:Date, default: Date.now, require:true},
     updated_at: {type:Date, default: Date.now, require:true}
 });
 

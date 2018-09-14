@@ -6,14 +6,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var TenantActivityScheme = new Schema({
+    activities: {type: Array},
     company: {type: String, required: true},
-    tenant: {type: String, required: true},
-    tenant_name: {type: String, required: true},
+    created_at: {type: Date, default: Date.now,require:true},
     description: {type: String},
     enable: {type: Boolean, required: true, default: false},
     scope: {type: String, required: true},
-    activities: {type: Array},
-    created_at: {type: Date, default: Date.now,require:true},
+    tenant: {type: String, required: true},
+    tenant_name: {type: String, required: true},
     updated_at: {type: Date, default: Date.now,require:true}
 });
 
