@@ -16,7 +16,7 @@ var TenantActivityRecordsScheme = new Schema({
     npm_module: {type: String},
     npm_version: {type: String},
     path: {type: String},
-    pricing: {type: Array},
+    pricings: {type: Array},
     reviewed: {type: Boolean, required: true, default: false},
     state: {type: String},
     tags: {type: Array},
