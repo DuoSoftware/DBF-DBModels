@@ -12,6 +12,7 @@ var TenantActivityRecordsScheme = new Schema({
     description: {type: String},
     faq: {type: Array},
     features: {type: Array},
+    image: {type: String},
     languages: {type: Array},
     npm_module: {type: String},
     npm_version: {type: String},
