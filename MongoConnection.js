@@ -1,7 +1,8 @@
 var util = require('util');
 var mongoose = require('mongoose');
 var config = require('config');
-
+mongoose.set('useCreateIndex', true);
+mongoose.set('useFindAndModify', false);
 module.exports = class MongooseConnection {
 
     constructor() {
