@@ -14,7 +14,7 @@ var TenantActivityRecordsScheme = new Schema({
     features: {type: Array},
     image: {type: String},
     languages: {type: Array},
-    npm_module: {type: String},
+    npm_module: {type: String, required: true},
     npm_version: {type: String},
     path: {type: String},
     pricings: {type: Array},
@@ -90,3 +90,5 @@ module.exports.tenantactivityvariables = mongoose.model('tenantactivityvariables
 module.exports.tenantactivitylanguages = mongoose.model('tenantactivitylanguages', TenantActivityLanguagesScheme);
 module.exports.tenantactivitytags = mongoose.model('tenantactivitytags', TenantActivityTagsScheme);
 module.exports.tenantactivitypricings = mongoose.model('tenantactivitypricings', TenantActivityPricingScheme);
+
+TenantActivityRecordsScheme.index({"activity_name": 1, "npm_module": 1}, {"unique": true});
