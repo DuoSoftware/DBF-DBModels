@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
 var TenantActivityRecordsScheme = new Schema({
     activity_name: {type: String, required: true},
     company: {type: String, required: true},
-    created_at: {type:Date, default: Date.now, require:true},
+    created_at: {type:Date, require:true},
     description: {type: String},
     faq: {type: Array},
     features: {type: Array},
@@ -24,7 +24,7 @@ var TenantActivityRecordsScheme = new Schema({
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
     type: {type: String},
-    updated_at: {type:Date, default: Date.now, require:true},
+    updated_at: {type:Date, require:true},
     variables: {type: Array},
     what_you_get: {type: Array}
 });
@@ -36,7 +36,7 @@ var TenantActivityVariablesScheme = new Schema({
     category: {type: String},
     company: {type: String, required: true},
     control: {type: String},
-    created_at: {type:Date, default: Date.now, require:true},
+    created_at: {type:Date, require:true},
     data_type: {type: String},
     display_name: {type: String, required: true},
     group: {type: String},
@@ -46,7 +46,7 @@ var TenantActivityVariablesScheme = new Schema({
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
     type: {type: String},
-    updated_at: {type:Date, default: Date.now, require:true},
+    updated_at: {type:Date, require:true},
     value: {type: String},
     value_list: {type: Array}
 });
@@ -54,34 +54,34 @@ var TenantActivityVariablesScheme = new Schema({
 var TenantActivityLanguagesScheme = new Schema({
     activity_name: {type: String, required: true},
     company: {type: String, required: true},
-    created_at: {type:Date, default: Date.now, require:true},
+    created_at: {type:Date, require:true},
     language: {type: String, required: true},
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
-    updated_at: {type:Date, default: Date.now, require:true}
+    updated_at: {type:Date, require:true}
 });
 
 var TenantActivityTagsScheme = new Schema({
     activity_name: {type: String, required: true},
     company: {type: String, required: true},
-    created_at: {type:Date, default: Date.now, require:true},
+    created_at: {type:Date, require:true},
     tag: {type: String, required: true},
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
-    updated_at: {type:Date, default: Date.now, require:true}
+    updated_at: {type:Date, require:true}
 });
 
 var TenantActivityPricingScheme = new Schema({
     activity_name: {type: String, required: true},
     bill_cycle: {type: String},
     company: {type: String, required: true},
-    created_at: {type:Date, default: Date.now, require:true},
+    created_at: {type:Date, require:true},
     price: {type: String, default: 0},
     pricing_fts: {type: Array},
     pricing_name: {type: String, required: true},
     tenant: {type: String, required: true},
     tenant_name: {type: String, required: true},
-    updated_at: {type:Date, default: Date.now, require:true}
+    updated_at: {type:Date, require:true}
 });
 
 
