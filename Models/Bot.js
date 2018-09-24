@@ -61,7 +61,7 @@ var botSchema = new Schema({
         tenant: { type: Number, required: true },
         created_at: {type:Date,default: Date.now,require:true},
         updated_at: {type:Date,default: Date.now,require:true},
-        page_id: {type:String,require:true,unique: true},
+        page_id: {type:String,require:true},
         app_id: {type:String,require:true},
         app_secret: {type:String,require:true},
         page_token: {type:String,require:true},
@@ -90,6 +90,6 @@ module.exports.SlackChannel = mongoose.model('SlackChannel', slackChannelSchema)
 module.exports.BotApp = mongoose.model('BotApp', botAppSchema);
 
 botAppSchema.index({ company: 1, tenant: 1, bot_id: 1}, { unique: true });
-botSchema.index({ company: 1, tenant: 1, name: 1, 'channel_facebook.page_id': 1}, { unique: true });
+botSchema.index({ company: 1, tenant: 1, name: 1}, { unique: true });
 fbChannelSchema.index({page_id: 1}, { unique: true });
 
