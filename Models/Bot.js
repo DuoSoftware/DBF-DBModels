@@ -46,40 +46,32 @@ var slackChannelSchema = new Schema({
 
 
 var botSchema = new Schema({
-    name: {type: String, required: true, unique: true},
-    company: { type: Number, required: true },
-    tenant: { type: Number, required: true },
-    created_at: {type:Date,default: Date.now,require:true},
-    updated_at: {type:Date,default: Date.now,require:true},
-    screen_name: {type: String, required: true},
-    status:{type: Boolean, required: true},
-    description: {type: String},
-    creation_type:{type: String},
-    bot_type:{type: String},
-    channel_facebook: {
-        company: { type: Number, required: true },
-        tenant: { type: Number, required: true },
-        created_at: {type:Date,default: Date.now,require:true},
-        updated_at: {type:Date,default: Date.now,require:true},
-        page_id: {type:String,require:true},
-        app_id: {type:String,require:true},
-        app_secret: {type:String,require:true},
-        page_token: {type:String,require:true},
-        verification_token: {type:String,require:true}    
-    },
-    channel_slack: slackChannelSchema,
     ai:{
         name : {type: String,default: 'default',require:true},
         key: {type: String},
         description: {type: String}
     },
-    entities :{ type : Array , "default" : [] },
+    avatar: String,
     aws : {
         "accessKeyId": {type: String, default: 'n/a',require:true},
         "secretAccessKey": {type: String, default: 'n/a',require:true},
         "region": {type: String, default: 'n/a',require:true}
     },
-    avatar: String
+    bot_type:{type: String},
+    channel_facebook: fbChannelSchema,
+    channel_slack: slackChannelSchema,
+    company: { type: Number, required: true },
+    created_at: {type:Date,default: Date.now,require:true},
+    creation_type:{type: String},
+    description: {type: String},
+    entities :{ type : Array , "default" : [] },
+    facebook_page_id: {type: String},
+    name: {type: String, required: true, unique: true},
+    slack_client_id: {type: String},
+    status:{type: Boolean, required: true},
+    tenant: { type: Number, required: true },
+    updated_at: {type:Date,default: Date.now,require:true},
+    screen_name: {type: String, required: true}
 });
 
 
