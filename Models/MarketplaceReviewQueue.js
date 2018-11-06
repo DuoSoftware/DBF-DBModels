@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 var MarketplaceReviewScheme = new Schema({
     company: {type: String, required: true},
     tenant: {type: String, required: true},
-    created_at: {type: Date, require:true},
-    updated_at: {type: Date, require:true},
+    created_at: {type: Date, require:true, default: Date.now},
+    updated_at: {type: Date, require:true, default: Date.now},
     description: {type: String},
     review_status: {type: String, required: true, enum: ['INQUEUE', 'PASSED', 'FAILED', 'PENDINGREVISION', 'INPROGRESS'], default : 'INQUEUE' },
     activity_name :  {type: String, required: true},
