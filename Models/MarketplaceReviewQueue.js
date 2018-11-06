@@ -7,7 +7,7 @@ var MarketplaceReviewScheme = new Schema({
     created_at: {type: Date, require:true},
     updated_at: {type: Date, require:true},
     description: {type: String},
-    review_status: {type: String, required: true, enum: ['INQUEUE', 'PASSED', 'FAILED', 'PENDINGREVISION', 'INPROGRESS']},
+    review_status: {type: String, required: true, enum: ['INQUEUE', 'PASSED', 'FAILED', 'PENDINGREVISION', 'INPROGRESS'], default : 'INQUEUE' },
     activity_name :  {type: String, required: true},
     npm_module: {type: String, required: true},
     npm_version: {type: String},
@@ -16,13 +16,13 @@ var MarketplaceReviewScheme = new Schema({
     release_notes: {type: Array},
     reviewer_comments: [
         {
-            reviewer: {type: String, required:true},
-            comment: {type: String, required:true},
+            reviewer: {type: String},
+            comment: {type: String},
             status: {type: String}
         }
     ],
     review_count: {type: Number},
-    tenant_name: {type: String, required: true},
+    tenant_name: {type: String, required: true}
 
 });
 
