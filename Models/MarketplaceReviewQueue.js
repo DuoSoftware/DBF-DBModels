@@ -26,6 +26,6 @@ var MarketplaceReviewScheme = new Schema({
 
 });
 
-MarketplaceReviewScheme.index({"company": 1, "tenant": 1}, {"unique": true});
+MarketplaceReviewScheme.index({"company": 1, "tenant": 1, "activity_name" : 1}, {"unique": true});
 
 module.exports.marketplacereview = mongoose.model('marketplacereview', MarketplaceReviewScheme);
