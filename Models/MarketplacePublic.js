@@ -25,5 +25,7 @@ var MarketplacePublicActivitiesScheme = new Schema({
     release_notes: {type: Array}
 });
 
+MarketplaceReviewScheme.index({"activity_name" : 1}, {"unique": true});
+
 
 module.exports.marketplacepublicactivities = mongoose.model('marketplacepublicactivities', MarketplacePublicActivitiesScheme);
