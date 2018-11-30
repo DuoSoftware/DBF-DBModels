@@ -21,6 +21,8 @@ var metadataSchema = new Schema({
     context: [{ type: String }]
 });
 
+metadataSchema.index({ "company": 1, "tenant": 1, "bot_id": 1}, { "unique": true });
+
 module.exports.metadata = mongoose.model('metadata', metadataSchema);
 
 
