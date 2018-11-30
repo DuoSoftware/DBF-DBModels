@@ -6,6 +6,8 @@ var Schema = mongoose.Schema;
 
 var metadataSchema = new Schema({
     bot_id: { type: String, required: true },
+    company: {type: Number, required: true},
+    tenant: {type: Number, required: true},
     created_at: { type: Date, default: Date.now, require: true },
     updated_at: { type: Date, default: Date.now, require: true },
     cards: [{ type: String }],
