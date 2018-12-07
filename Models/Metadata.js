@@ -20,7 +20,8 @@ var metadataSchema = new Schema({
     datasources: [{ type: String }],
     conversationalflows: [{ type: String }],
     entities: [{ type: String }],
-    context: [{ type: String }]
+    context: [{ type: String }],
+    aimaps: [{ type: String }]
 });
 
 metadataSchema.index({ "company": 1, "tenant": 1, "bot_id": 1}, { "unique": true });
