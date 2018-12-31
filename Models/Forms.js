@@ -23,4 +23,4 @@ var FormsScheme = new Schema({
 FormsScheme.index({"form_name" : 1, "company": 1, "tenant": 1}, {"unique": true});
 
 
-module.exports.forms = mongoose.model('docks', FormsScheme);
+module.exports.forms = mongoose.model('forms', FormsScheme);
