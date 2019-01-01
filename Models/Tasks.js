@@ -13,7 +13,7 @@ var TasksScheme = new Schema({
     created_at: {type:Date, default: Date.now,require:true},
     updated_at: {type:Date, default: Date.now,require:true},
     raw_data: {},
-    description: {},
+    description: {type: String, required: true}
 
 });
 
