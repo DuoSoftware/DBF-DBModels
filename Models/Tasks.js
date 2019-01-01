@@ -8,7 +8,7 @@ var TasksScheme = new Schema({
     form_name : {type: String, required: true},
     form_id : {type: String, required: true},
     assigner : {type: String, required: true},
-    assignee : {type: String, required: true},
+    assignee : {type: String, required: true, default : 'NONE'},
     review_status: {type: String, required: true, enum: ['INQUEUE', 'PASSED', 'FAILED', 'INPROGRESS'], default : 'INQUEUE' },
     created_at: {type:Date, default: Date.now,require:true},
     updated_at: {type:Date, default: Date.now,require:true},
