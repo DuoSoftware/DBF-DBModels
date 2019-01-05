@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ZoneUsageScheme = new Schema({
-    company: {type: String, required: true},
-    tenant: {type: String, required: true},
+
     created_at: {type:Date, default: Date.now,require:true},
     updated_at: {type:Date, default: Date.now,require:true},
     value : {
