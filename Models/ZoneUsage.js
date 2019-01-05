@@ -10,6 +10,7 @@ var ZoneUsageScheme = new Schema({
         discarded: {type: Number, default: 0},
         processing: {type: Number, default: 0},
         received: {type: Number, default: 0},
+        sent : {type: Number, default: 0},
         requests: {type: Number, default: 0},
         responses: {
             "1xx" : {type: Number, default: 0},
@@ -20,7 +21,6 @@ var ZoneUsageScheme = new Schema({
             "total": {type: Number, default: 0}
         }
     },
-    sent : {type: Number, default: 0},
     zone : {type: String, required: true}
 
 });
