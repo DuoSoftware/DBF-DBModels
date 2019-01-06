@@ -25,6 +25,6 @@ var ZoneUsageScheme = new Schema({
 });
 
 
-DocksScheme.index({"zone" : 1}, {"unique": true});
+ZoneUsageScheme.index({"zone" : 1}, {"unique": true});
 
 module.exports.zoneUsage = mongoose.model('zoneUsage', ZoneUsageScheme);
