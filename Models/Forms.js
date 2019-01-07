@@ -7,6 +7,7 @@ var FormsScheme = new Schema({
     tenant: {type: String, required: true},
     created_at: {type:Date, default: Date.now,require:true},
     updated_at: {type:Date, default: Date.now,require:true},
+    form_link:{type: String},
     roles: [{
         roleId: {type: String},
         roleName: {type: String}
@@ -16,7 +17,8 @@ var FormsScheme = new Schema({
         groupName: {type: String}
     }],
     description: {type: String},
-    status:{type: Boolean, required: true, default:true}
+    status:{type: Boolean, required: true, default:true},
+    raw_data : {}
 
 });
 
