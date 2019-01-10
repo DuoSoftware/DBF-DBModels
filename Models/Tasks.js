@@ -5,6 +5,7 @@ var TasksScheme = new Schema({
     task_name: {type: String, required: true},
     company: {type: String, required: true},
     tenant: {type: String, required: true},
+    type: {type: String, required: true},
     form_name : {type: String, required: true},
     form_id : {type: String, required: true},
     assigner : {type: String, required: true},
