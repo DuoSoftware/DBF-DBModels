@@ -11,7 +11,8 @@ var botAppSchema = new Schema({
     app: {type:String,require:true},
     order:{ type: Number, required: true },
     config: {
-        Securitykey: { type: String, required: true }
+        Securitykey: { type: String, required: true },
+        typing : { type: Boolean , default: false  }
     }
 
 });
