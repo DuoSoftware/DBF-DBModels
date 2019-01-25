@@ -4,7 +4,10 @@ var Schema = mongoose.Schema;
 var FormsScheme = new Schema({
     form_name: {type: String, required: true},
     company: {type: String, required: true},
+    icon: {type: String, required: true},
+    link: {type: String, required: true},
     tenant: {type: String, required: true},
+    type: {type: String, required: true},
     created_at: {type:Date, default: Date.now,require:true},
     updated_at: {type:Date, default: Date.now,require:true},
     form_link:{type: String},
