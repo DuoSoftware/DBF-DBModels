@@ -12,7 +12,7 @@ var ActivityUserRegistrySchema = new Schema({
   updated_at: { type:Date, default: Date.now, require:true},
 });
 
-MarketplaceReviewScheme.index({"activity_name" : 1}, {"unique": true});
+ActivityUserRegistrySchema.index({"activity_name" : 1}, {"unique": true});
 
 
 module.exports.ActivityUserRegistry = mongoose.model('ActivityUserRegistry', ActivityUserRegistrySchema);
