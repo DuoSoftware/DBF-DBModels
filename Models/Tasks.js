@@ -11,6 +11,7 @@ var TasksScheme = new Schema({
     assigner : {type: String, required: true},
     assignee : {type: String, required: true, default : 'NONE'},
     review_status: {type: String, required: true, enum: ['INQUEUE', 'PASSED', 'FAILED', 'INPROGRESS'], default : 'INQUEUE' },
+    is_favorite: {type: Boolean, required: true, default : false},
     created_at: {type:Date, default: Date.now,require:true},
     updated_at: {type:Date, default: Date.now,require:true},
     raw_data: {},
