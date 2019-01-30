@@ -67,6 +67,8 @@ var botSchema = new Schema({
     description: {type: String},
     entities :{ type : Array , "default" : [] },
     facebook_page_id: {type: String},
+    language : {type: String, default: "en", require:true},
+    multi_language_enabled : {type: Boolean, default: false, require:true},
     name: {type: String, required: true, unique: true},
     slack_client_id: {type: String},
     status:{type: Boolean, required: true},
