@@ -28,6 +28,7 @@ var TransactionScheme = new Schema({
     currency: {type: String, require:true, default: "$" },
     tax: {type: Number},
     other_fees: {type: Number},
+    total : {type: Number},
     rawData : {}
 
 });
