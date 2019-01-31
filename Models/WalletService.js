@@ -19,6 +19,7 @@ var WalletScheme = new Schema({
 
 
 var TransactionScheme = new Schema({
+    transaction_id  : {type: String, required: true},
     company: {type: String, required: true},
     tenant: {type: String, required: true},
     wallet_id : {type: String, required: true},
