@@ -27,8 +27,10 @@ var groupScheme = new Schema({
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
     groupName: {type:String,require:true},
-    roleName: {type:String,require:true},
-    roleId: {type:String,require:true},
+    roles:[{
+        roleName: {type:String,require:true},
+        roleId: {type:String,require:true},
+    }],
     users:[{
         email: {type: String},
         userId: {type: String}
