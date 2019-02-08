@@ -18,6 +18,7 @@ var metadataSchema = new Schema({
     datasources: [{ type: String }],
     entities: [{ type: String }],
     forms: [{ type: String }],
+    checkouts: [{ type: String }],
     mediacards: [{ type: String }],
     quickreplies: [{ type: String }],
     receipts: [{ type: String }],
