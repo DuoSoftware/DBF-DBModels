@@ -5,23 +5,24 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var metadataSchema = new Schema({
-    bot_id: { type: String, required: true },
-    company: {type: Number, required: true},
-    tenant: {type: Number, required: true},
-    created_at: { type: Date, default: Date.now, require: true },
-    updated_at: { type: Date, default: Date.now, require: true },
-    cards: [{ type: String }],
-    attachments: [{ type: String }],
-    quickreplies: [{ type: String }],
-    buttoncollections: [{ type: String }],
-    mediacards: [{ type: String }],
-    receipts: [{ type: String }],
+    aimaps: [{ type: String }],
     airline: [{ type: String }],
-    datasources: [{ type: String }],
-    conversationalflows: [{ type: String }],
-    entities: [{ type: String }],
+    attachments: [{ type: String }],
+    bot_id: { type: String, required: true },
+    buttoncollections: [{ type: String }],
+    cards: [{ type: String }],
+    company: {type: Number, required: true},
     context: [{ type: String }],
-    aimaps: [{ type: String }]
+    conversationalflows: [{ type: String }],
+    created_at: { type: Date, default: Date.now, require: true },
+    datasources: [{ type: String }],
+    entities: [{ type: String }],
+    forms: [{ type: String }],
+    mediacards: [{ type: String }],
+    quickreplies: [{ type: String }],
+    receipts: [{ type: String }],
+    tenant: {type: Number, required: true},
+    updated_at: { type: Date, default: Date.now, require: true }
 });
 
 metadataSchema.index({ "company": 1, "tenant": 1, "bot_id": 1}, { "unique": true });

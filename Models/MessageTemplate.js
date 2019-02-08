@@ -64,14 +64,14 @@ var attachmentSchema = new Schema({
 
 
 var cardSchema = new Schema({
-    name: String,
-    description: String,
+    buttons: [buttonSchema],
+    card: String,
+    card_type: String,
     company: {type: Number, required: true},
-    tenant: {type: Number, required: true},
-    created_at: {type: Date, default: Date.now, require: true},
-    updated_at: {type: Date, default: Date.now, require: true},
-    type: {type: String, enum: ['generic', 'list'], default: 'generic', required: true},
     contentType: {type: String, enum: ['static', 'dynamic'], default: 'static', required: true},
+    created_at: {type: Date, default: Date.now, require: true},
+    description: String,
+    form: String,
     items: [
         {
             title: String,
@@ -83,8 +83,10 @@ var cardSchema = new Schema({
             buttons: [buttonSchema]
         }
     ],
-    buttons: [buttonSchema]
-
+    name: String,
+    tenant: {type: Number, required: true},
+    type: {type: String, enum: ['generic', 'list'], default: 'generic', required: true},
+    updated_at: {type: Date, default: Date.now, require: true}  
 });
 
 var mediaCardSchema = new Schema({
