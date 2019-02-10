@@ -4,7 +4,6 @@ var Schema = mongoose.Schema;
 var AppScheme = new Schema({
     app_name: {type: String, required: true},
     app_key: {type: String, required: true},
-    app_id: {type: String, required: true},
     company: {type: String, required: true},
     app_icon: {type: String, required: true},
     tenant: {type: String},
@@ -18,7 +17,7 @@ var AppScheme = new Schema({
 
 });
 
-AppScheme.index({"form_name" : 1, "company": 1, "tenant": 1}, {"unique": true});
+AppScheme.index({"app_name" : 1, "company": 1, "tenant": 1}, {"unique": true});
 
 
 module.exports.apps = mongoose.model('apps', AppScheme);
