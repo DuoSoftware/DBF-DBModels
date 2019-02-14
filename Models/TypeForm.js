@@ -6,6 +6,7 @@ var TypeFormScheme = new Schema({
     created_at: {type:Date, default: Date.now,require:true},
     expiresIn: {type: String, required: true},
     refreshToken: {type: String, required: true},
+    state: {type: String, required: true},
     tenant: {type: String, required: true},
     token: {type: String, required: true},
     updated_at: {type:Date, default: Date.now,require:true}
@@ -17,6 +18,7 @@ var TypeFormLogScheme = new Schema({
     expiresIn: {type: String, required: true},
     logID: {type: String, required: true},
     refreshToken: {type: String, required: true},
+    state: {type: String, required: true},
     tenant: {type: String, required: true},
     token: {type: String, required: true}
 });
