@@ -71,6 +71,7 @@ var botSchema = new Schema({
     multi_language_enabled : {type: Boolean, default: false, require:true},
     name: {type: String, required: true, unique: true},
     slack_client_id: {type: String},
+    speech_to_text_enabled : {type: Boolean, default: false, require:true},
     status:{type: Boolean, required: true},
     tenant: { type: Number, required: true },
     updated_at: {type:Date,default: Date.now,require:true},
