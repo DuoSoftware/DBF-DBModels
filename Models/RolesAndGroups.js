@@ -102,8 +102,15 @@ var userScheme = new Schema({
 rolesScheme.index({ "company": 1, "tenant": 1, "roleName": 1}, { "unique": true });
 groupScheme.index({ "company": 1, "tenant": 1, "groupName": 1}, { "unique": true });
 userScheme.index({ "company": 1, "tenant": 1, "email": 1}, { "unique": true });
+projectScheme.index({ "workSpaceId": 1, "projectName": 1}, { "unique": true });
+workSpaceScheme.index({ "company": 1, "tenant": 1, "workSpaceName": 1}, { "unique": true });
+
+
 
 
 module.exports.roles = mongoose.model('roles', rolesScheme);
 module.exports.groups = mongoose.model('groups', groupScheme);
 module.exports.user = mongoose.model('user', userScheme);
+module.exports.workspace = mongoose.model('workspace', workSpaceScheme);
+module.exports.project = mongoose.model('project', projectScheme);
+
