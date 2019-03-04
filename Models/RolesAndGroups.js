@@ -39,6 +39,40 @@ var groupScheme = new Schema({
     enable: { type : Boolean , default : true }
 });
 
+var workSpaceScheme = new Schema({
+    company: {type: Number, required: true},
+    tenant: {type: Number, required: true},
+    created_at: {type:Date,default: Date.now,require:true},
+    updated_at: {type:Date,default: Date.now,require:true},
+    workSpaceName: {type:String,require:true},
+    projects:[{
+        projectName: {type:String,require:true},
+        projectId: {type:String,require:true},
+    }],
+    users:[{
+        email: {type: String},
+        userId: {type: String}
+    }],
+    description: {type:String},
+    enable: { type : Boolean , default : true }
+});
+
+var projectScheme = new Schema({
+    company: {type: Number, required: true},
+    tenant: {type: Number, required: true},
+    created_at: {type:Date,default: Date.now,require:true},
+    updated_at: {type:Date,default: Date.now,require:true},
+    projectName: {type:String,require:true},
+    workSpaceName: {type:String,require:true},
+    workSpaceId: {type:String,require:true},
+    users:[{
+        email: {type: String},
+        userId: {type: String}
+    }],
+    description: {type:String},
+    enable: { type : Boolean , default : true }
+});
+
 
 var userScheme = new Schema({
     company: {type: Number, required: true},
