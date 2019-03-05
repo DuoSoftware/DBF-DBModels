@@ -92,6 +92,14 @@ var userScheme = new Schema({
         groupId: {type: String},
         groupName: {type: String}
     }],
+    workspaces:  [{
+        workspaceId: {type: String},
+        workspaceName: {type: String}
+    }],
+    projects:  [{
+        projectId: {type: String},
+        projectName: {type: String}
+    }],
     description: {type:String},
     enable: { type : Boolean , default : true }
 });
