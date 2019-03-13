@@ -2,6 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var WorkFlowScheme = new Schema({
+        company: {type: Number, required: true},
+        tenant: {type: Number, required: true},
         ID: {type: String, required: true},
         WFID: {type: String, required: true},
         Name: {type: String, required: true},
