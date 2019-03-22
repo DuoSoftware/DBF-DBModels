@@ -40,7 +40,6 @@ var groupScheme = new Schema({
 });
 
 var workSpaceScheme = new Schema({
-    company: {type: Number, required: true},
     tenant: {type: Number, required: true},
     created_at: {type:Date,default: Date.now,require:true},
     updated_at: {type:Date,default: Date.now,require:true},
