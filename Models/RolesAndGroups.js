@@ -84,10 +84,14 @@ var userScheme = new Schema({
     botUniqueId:  {type:String},
     email: {type:String,require:true},
     roles: [{
+        workspaceId: {type: String},
+        projectId: {type: String},
         roleId: {type: String},
         roleName: {type: String}
     }],
     groups:  [{
+        workspaceId: {type: String},
+        projectId: {type: String},
         groupId: {type: String},
         groupName: {type: String}
     }],
@@ -96,6 +100,7 @@ var userScheme = new Schema({
         workspaceName: {type: String}
     }],
     projects:  [{
+        workspaceId: {type: String},
         projectId: {type: String},
         projectName: {type: String}
     }],
