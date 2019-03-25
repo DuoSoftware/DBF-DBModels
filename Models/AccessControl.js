@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var accessControlSchema = new Schema({
     permissionName : { type: String, required: true },
-    permissionObj : {},
+    permissionObj : [],
     created_at: {type:Date,default: Date.now},
     updated_at: {type:Date,default: Date.now}
 });
