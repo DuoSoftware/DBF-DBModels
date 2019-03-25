@@ -9,6 +9,7 @@ var accessControlSchema = new Schema({
     updated_at: {type:Date,default: Date.now}
 });
 
+userScheme.index({ "permissionName": 1}, { "unique": true });
 
 
 module.exports.accesscontrol = mongoose.model('accesscontrol', accessControlSchema);
