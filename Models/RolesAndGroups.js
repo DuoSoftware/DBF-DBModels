@@ -113,7 +113,7 @@ var userScheme = new Schema({
 
 rolesScheme.index({ "company": 1, "tenant": 1, "roleName": 1}, { "unique": true });
 groupScheme.index({ "company": 1, "tenant": 1, "groupName": 1}, { "unique": true });
-userScheme.index({ "company": 1, "tenant": 1, "email": 1}, { "unique": true });
+userScheme.index({ "email": 1}, { "unique": true });
 projectScheme.index({ "company": 1, "tenant": 1}, { "unique": true });
 workSpaceScheme.index({ "tenant": 1}, { "unique": true });
 
