@@ -105,6 +105,7 @@ var userScheme = new Schema({
         projectName: {type: String}
     }],
     description: {type:String},
+    settings: {},
     enable: { type : Boolean , default : true }
 });
 
