@@ -105,6 +105,10 @@ var userScheme = new Schema({
         projectId: {type: String},
         projectName: {type: String}
     }],
+    subscription : {
+        current : {type: String},
+        intented : {type: String}
+    },
     description: {type:String},
     settings: {},
     enable: { type : Boolean , default : true }
