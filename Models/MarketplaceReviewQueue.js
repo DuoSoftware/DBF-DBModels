@@ -11,6 +11,7 @@ var MarketplaceReviewScheme = new Schema({
     activity_name :  {type: String, required: true},
     npm_module: {type: String, required: true},
     npm_version: {type: String},
+    type: {type: String},
     path: {type: String},
     variables: {type: Array},
     scope: {type: String},
