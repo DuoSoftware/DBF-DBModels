@@ -19,7 +19,7 @@ var ConnectionsScheme = new Schema({
     state: {type: String, required: true},
     tenant: {type: Number, required: true},
     updated_at: {type:Date,default: Date.now},
-    userSub: {type: Number, required: true},
+    userSub: {type: String, required: true},
 });
 
 
