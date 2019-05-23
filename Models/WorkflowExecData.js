@@ -10,4 +10,4 @@ var WorkflowExecDataScheme = new Schema({
 
 WorkflowExecDataScheme.index({ "workflowName": 1}, { "unique": true });
 
-module.exports.workflowData = mongoose.model('workflowData', WorkflowExecDataScheme);
+module.exports.workflowexecData = mongoose.model('workflowexecData', WorkflowExecDataScheme);
