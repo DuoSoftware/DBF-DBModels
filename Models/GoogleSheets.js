@@ -11,7 +11,8 @@ var GoogleSheetsScheme = new Schema({
     scope: { type: String, required: true },
     tenant: { type: String, required: true },
     tokenType: { type: String, required: true },
-    updated_at: { type: Date, default: Date.now, require: true }
+    updatedAt: { type: Date, default: Date.now, require: true },
+    userSub: { type: String, required: true }
 });
 
 var GoogleSheetsLogScheme = new Schema({
