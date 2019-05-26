@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ConnectionsScheme = new Schema({
-    company: {type: Number, required: true},
+    company: {type: String, required: true},
     connectionID: {type: String, required: true},
     connectionType: {type: String},
     created_at: {type:Date,default: Date.now},
@@ -17,7 +17,7 @@ var ConnectionsScheme = new Schema({
     integrationData: {type: Array},
     integrationName: {type: String},
     state: {type: String},
-    tenant: {type: Number, required: true},
+    tenant: {type: String, required: true},
     updated_at: {type:Date,default: Date.now},
     userSub: {type: String, required: true},
 });
