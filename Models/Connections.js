@@ -8,9 +8,11 @@ var Schema = mongoose.Schema;
 var ConnectionsScheme = new Schema({
     company: {type: String, required: true},
     connectionID: {type: String, required: true},
+    connectionName: {type: String},
     connectionType: {type: String},
     created_at: {type:Date,default: Date.now},
     description: {type: String},
+    email: {type: String},
     enable: {type: Boolean},
     image: {type: String},
     integrationConnections: {type: Array},

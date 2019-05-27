@@ -4,8 +4,10 @@ var Schema = mongoose.Schema;
 var ConnectionsGoogleSheetsScheme = new Schema({
     accessToken: { type: String, required: true },
     company: { type: String, required: true },
+    connectionName: {type: String},
     connectionID: { type: String, required: true },
     createdAt: { type: Date, default: Date.now, require: true },
+    email: {type: String},
     expiryDate: { type: String, required: true },
     refreshToken: { type: String, required: true },
     scope: { type: String, required: true },
