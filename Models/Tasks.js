@@ -3,8 +3,6 @@ var Schema = mongoose.Schema;
 
 var TasksScheme = new Schema({
     task_name: {type: String, required: true},
-    company: {type: String, required: true},
-    tenant: {type: String, required: true},
     type: {type: String, required: true},
     form_name : {type: String, required: true},
     form_id : {type: String, required: true},
@@ -18,8 +16,6 @@ var TasksScheme = new Schema({
     description: {type: String, required: true}
 
 });
-
-TasksScheme.index({"task_name" : 1, "company": 1, "tenant": 1}, {"unique": true});
 
 
 module.exports.tasks = mongoose.model('tasks', TasksScheme);
