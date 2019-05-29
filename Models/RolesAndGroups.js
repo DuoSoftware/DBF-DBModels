@@ -106,6 +106,11 @@ var userScheme = new Schema({
         projectId: {type: String},
         projectName: {type: String}
     }],
+    channels:[{
+        channelId: {type: String},
+        channelName: {type: String},
+        channelPath: {type: String}
+    }],
     description: {type:String},
     settings: {},
     enable: { type : Boolean , default : true }
