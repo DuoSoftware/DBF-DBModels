@@ -5,7 +5,38 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ChannelsScheme = new Schema({
+var fbChannelSchema = new Schema({
+    app_id: {type:String, required:true},
+    app_secret: {type:String, required:true},
+    page_id: {type:String, required:true, unique: true},
+    page_token: {type:String, required:true},
+    verification_token: {type:String, required:true}
+});
+
+var slackChannelSchema = new Schema({
+    api_token: {type:String, required:true},
+    bot_token: {type:String, required:true},
+    client_id: {type:String, required:true},
+    client_secret: {type:String, required:true},
+    verification_token: {type:String, required:true}
+});
+
+var viberChannelSchema = new Schema({
+    authToken: {type:String, required:true},
+    avatar: {type:String, required:true},
+    name: {type:String, required:true},
+    webhookurl: {type:String, required:true}
+});
+
+var voiceBotChannelSchema = new Schema({
+});
+
+var whatsAppChannelSchema = new Schema({
+    accountSid: {type:String, required:true},
+    authToken: {type:String, required:true},
+});
+
+var ChannelScheme = new Schema({
     botID: {type:String, required:true},
     company: {type:String, required:true},
     channelID: {type:String, required:true},
@@ -26,62 +57,6 @@ var ChannelsScheme = new Schema({
     userSub: {type:String, required:true}
 });
 
-var fbChannelSchema = new Schema({
-    app_id: {type:String, required:true},
-    app_secret: {type:String, required:true},
-    company: {type:String, required:true},
-    created_at: {type:Date, default:Date.now, required:true},
-    page_id: {type:String, required:true, unique: true},
-    page_token: {type:String, required:true},
-    tenant: {type:String, required:true},
-    updated_at: {type:Date, default:Date.now, required:true},
-    userSub: {type:String, required:true},
-    verification_token: {type:String, required:true}
-});
+ChannelScheme.index({"fromID": 1}, {"unique" : true});
 
-var slackChannelSchema = new Schema({
-    api_token: {type:String, required:true},
-    bot_token: {type:String, required:true},
-    client_id: {type:String, required:true},
-    client_secret: {type:String, required:true},
-    company: {type:String, required:true},
-    created_at: {type:Date, default:Date.now, required:true},
-    tenant: {type:String, required:true},
-    updated_at: {type:Date, default:Date.now, required:true},
-    userSub: {type:String, required:true},
-    verification_token: {type:String, required:true}
-});
-
-var viberChannelSchema = new Schema({
-    authToken: {type:String, required:true},
-    avatar: {type:String, required:true},
-    company: {type:String, required:true},
-    created_at: {type:Date, default:Date.now, required:true},
-    name: {type:String, required:true},
-    tenant: {type:String, required:true},
-    updated_at: {type:Date, default:Date.now, required:true},
-    userSub: {type:String, required:true},
-    webhookurl: {type:String, required:true}
-});
-
-var voiceBotChannelSchema = new Schema({
-    company: {type:String, required:true},
-    created_at: {type:Date, default:Date.now, required:true},
-    tenant: {type:String, required:true},
-    updated_at: {type:Date, default:Date.now, required:true},
-    userSub: {type:String, required:true}
-});
-
-var whatsAppChannelSchema = new Schema({
-    accountSid: {type:String, required:true},
-    authToken: {type:String, required:true},
-    company: {type:String, required:true},
-    created_at: {type:Date, default:Date.now, required:true},
-    tenant: {type:String, required:true},
-    updated_at: {type:Date, default:Date.now, required:true},
-    userSub: {type:String, required:true}
-});
-
-ChannelsScheme.index({"channelID": 1, "fromID": 1}, {"unique": true});
-
-module.exports.channels = mongoose.model('channels', ChannelsScheme);
+module.exports.channel = mongoose.model('channel', ChannelScheme);
