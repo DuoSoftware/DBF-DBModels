@@ -2,9 +2,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var permissionCollectionSchema = new Schema({
+var permissionCollSchema = new Schema({
 
-    collectionName : { type: String, required: true },
+    collName : { type: String, required: true },
     company: { type: Number, required: true },
     tenant: { type: Number, required: true },
     collection : [
@@ -17,9 +17,9 @@ var permissionCollectionSchema = new Schema({
     updated_at: {type:Date,default: Date.now}
 });
 
-permissionCollectionSchema.index({ "collectionName": 1, "company": 1,"tenant": 1}, { "unique": true });
+permissionCollSchema.index({ "collName": 1, "company": 1,"tenant": 1}, { "unique": true });
 
 
-module.exports.permissioncollection = mongoose.model('permissioncollection', permissionCollectionSchema);
+module.exports.permissioncoll = mongoose.model('permissioncoll', permissionCollSchema);
 
 
