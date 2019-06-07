@@ -5,10 +5,10 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var fbChannelSchema = new Schema({
+var facebookChannelSchema = new Schema({
     app_id: {type:String, required:true},
     app_secret: {type:String, required:true},
-    page_id: {type:String, required:true, unique: true},
+    page_id: {type:String, required:true},
     page_token: {type:String, required:true},
     verification_token: {type:String, required:true}
 });
@@ -40,7 +40,7 @@ var ChannelScheme = new Schema({
     botID: {type:String, required:true},
     company: {type:String, required:true},
     channelID: {type:String, required:true},
-    channelFacebook: fbChannelSchema,
+    channelFacebook: facebookChannelSchema,
     channelSlack: slackChannelSchema,
     channelViber: viberChannelSchema,
     channelVoiceBot: voiceBotChannelSchema,
@@ -57,6 +57,6 @@ var ChannelScheme = new Schema({
     userSub: {type:String, required:true}
 });
 
-ChannelScheme.index({"fromID": 1}, {"unique" : true});
-
 module.exports.channel = mongoose.model('channel', ChannelScheme);
+
+ChannelScheme.index({'fromID': 1}, {unique : true});
