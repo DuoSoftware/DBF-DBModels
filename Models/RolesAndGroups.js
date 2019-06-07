@@ -18,6 +18,7 @@ var rolesScheme = new Schema({
         permissionName: {type: String},
         permissionObj: {}
     }],
+    collections : [],
     description: {type:String},
     enable: { type : Boolean , default : true }
 });
