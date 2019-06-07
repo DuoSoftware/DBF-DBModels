@@ -12,6 +12,8 @@ var rolesScheme = new Schema({
     updated_at: {type:Date,default: Date.now,require:true},
     roleName: {type:String,require:true},
     permissions:[{
+        isCollection : {type: Boolean},
+        collectionName: {type: String},
         permissionDisplayName : {type: String},
         permissionName: {type: String},
         permissionObj: {}

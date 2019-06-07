@@ -9,6 +9,7 @@ var permissionCollectionSchema = new Schema({
     tenant: { type: Number, required: true },
     permissionCollection : [
         {
+            collectionName : { type: String},
             permissionName : { type: String, required: true },
             permissionObj : []
         }
