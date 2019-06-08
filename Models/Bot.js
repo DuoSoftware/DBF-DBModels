@@ -60,6 +60,7 @@ var botSchema = new Schema({
     },
     bot_language : {type: String, default: "en", require:true},
     bot_type:{type: String},
+    channelIDs :{ type : Array , "default" : [] },
     channel_facebook: fbChannelSchema,
     channel_slack: slackChannelSchema,
     client_language : {type: String, default: "en", require:true},
