@@ -17,7 +17,6 @@ var botAppSchema = new Schema({
 
 });
 
-
 var fbChannelSchema = new Schema({
     company: { type: Number, required: true },
     tenant: { type: Number, required: true },
@@ -31,7 +30,6 @@ var fbChannelSchema = new Schema({
 
 });
 
-
 var slackChannelSchema = new Schema({
     company: { type: Number, required: true },
     tenant: { type: Number, required: true },
@@ -44,7 +42,6 @@ var slackChannelSchema = new Schema({
     bot_token: {type:String,require:true}
 
 });
-
 
 var botSchema = new Schema({
     ai:{
@@ -60,7 +57,7 @@ var botSchema = new Schema({
     },
     bot_language : {type: String, default: "en", require:true},
     bot_type:{type: String},
-    channelIDs :{ type : Array , "default" : [] },
+    channels :{ type : Array , "default" : [] },
     channel_facebook: fbChannelSchema,
     channel_slack: slackChannelSchema,
     client_language : {type: String, default: "en", require:true},
