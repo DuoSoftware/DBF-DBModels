@@ -35,6 +35,7 @@ var groupScheme = new Schema({
         roleId: {type:String,require:true},
         workspaceId: {type: String},
         projectId: {type: String},
+        groupName: {type:String}
     }],
     users:[{
         email: {type: String},
