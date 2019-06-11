@@ -94,6 +94,7 @@ var userScheme = new Schema({
     roles: [{
         workspaceId: {type: String},
         projectId: {type: String},
+        groupName: {type: String},
         roleId: {type: String},
         roleName: {type: String}
     }],
