@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 
 var facebookChannelSchema = new Schema({
     app_id: { type: String },
-    app_secret: { type: toString },
+    app_secret: { type: String },
     page_id: { type: String, required: true },
     page_token: { type: String, required: true },
     verification_token: { type: String }
@@ -37,7 +37,7 @@ var whatsAppChannelSchema = new Schema({
 });
 
 var ChannelScheme = new Schema({
-    botID: { type: String, required: true },
+    botID: { type: String },
     company: { type: String, required: true },
     channelID: { type: String, required: true },
     channelFacebook: facebookChannelSchema,
