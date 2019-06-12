@@ -6,11 +6,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var facebookChannelSchema = new Schema({
-    app_id: { type: String, required: false },
-    app_secret: { type: String, required: false },
+    app_id: { type: String },
+    app_secret: { type: toString },
     page_id: { type: String, required: true },
     page_token: { type: String, required: true },
-    verification_token: { type: String, required: false }
+    verification_token: { type: String }
 });
 
 var slackChannelSchema = new Schema({
