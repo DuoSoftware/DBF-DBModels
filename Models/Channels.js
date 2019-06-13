@@ -23,7 +23,7 @@ var slackChannelSchema = new Schema({
 
 var viberChannelSchema = new Schema({
     authToken: { type: String, required: true },
-    avatar: { type: String, required: true },
+    avatar: { type: String },
     name: { type: String, required: true },
     webhookurl: { type: String, required: true }
 });
@@ -38,18 +38,19 @@ var whatsAppChannelSchema = new Schema({
 
 var ChannelScheme = new Schema({
     botID: { type: String },
-    company: { type: String, required: true },
     channelID: { type: String, required: true },
+    channelName: { type: String },
     channelFacebook: facebookChannelSchema,
     channelSlack: slackChannelSchema,
     channelViber: viberChannelSchema,
     channelVoiceBot: voiceBotChannelSchema,
     channelWhatsApp: whatsAppChannelSchema,
+    company: { type: String, required: true },
+    connectedAccountName: { type: String },
     createdAt: { type: Date, default: Date.now },
     description: { type: String },
     enable: { type: Boolean },
     fromID: { type: String, required: true },
-    name: { type: String },
     state: { type: String },
     tenant: { type: String, required: true },
     type: { type: String, required: true },
