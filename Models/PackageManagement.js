@@ -13,7 +13,7 @@ var packageSchema = new Schema({
     updated_at: {type:Date,default: Date.now}
 });
 
-permissionCollectionSchema.index({ "subscriptionID": 1}, { "unique": true });
+packageSchema.index({ "subscriptionID": 1}, { "unique": true });
 
 
 module.exports.package = mongoose.model('package', packageSchema);
