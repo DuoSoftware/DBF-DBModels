@@ -10,7 +10,8 @@ var packageSchema = new Schema({
     packageDetails : {},
     tenant: { type: Number, required: true },
     created_at: {type:Date,default: Date.now},
-    updated_at: {type:Date,default: Date.now}
+    updated_at: {type:Date,default: Date.now},
+    status : {type :Boolean, required: true}
 });
 
 packageSchema.index({ "subscriptionID": 1}, { "unique": true });
