@@ -31,6 +31,10 @@ var viberChannelSchema = new Schema({
 var voiceBotChannelSchema = new Schema({
 });
 
+var webChatChannelSchema = new Schema({
+    member_id: { type: String, required: true },
+});
+
 var whatsAppChannelSchema = new Schema({
     accountSid: { type: String, required: true },
     authToken: { type: String, required: true },
@@ -44,6 +48,7 @@ var ChannelScheme = new Schema({
     channelSlack: slackChannelSchema,
     channelViber: viberChannelSchema,
     channelVoiceBot: voiceBotChannelSchema,
+    channelWebChat: webChatChannelSchema,
     channelWhatsApp: whatsAppChannelSchema,
     company: { type: String, required: true },
     connectedAccountName: { type: String },
