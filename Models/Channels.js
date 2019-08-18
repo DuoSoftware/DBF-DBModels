@@ -53,6 +53,7 @@ var ChannelScheme = new Schema({
     company: { type: String, required: true },
     connectedAccountName: { type: String },
     createdAt: { type: Date, default: Date.now },
+    defaultWorkflow: { type: String, default: "" },
     description: { type: String },
     enable: { type: Boolean },
     fromID: { type: String, required: true },
