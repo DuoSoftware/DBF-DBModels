@@ -48,7 +48,7 @@ module.exports = class MongooseConnection {
             connectionstring = util.format('mongodb://%s:%s@%s:%d/%s', this.mongouser, this.mongopass, this.mongoip, this.mongoport, this.mongodb)
         }
 
-        mongoose.connect(connectionstring, { useNewUrlParser: true, useUnifiedTopology: true, autoReconnect: true });
+        mongoose.connect(connectionstring, { useNewUrlParser: true, useUnifiedTopology: true });
     }
 }
 
