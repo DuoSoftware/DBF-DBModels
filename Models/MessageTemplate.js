@@ -81,11 +81,12 @@ var generalAssetSchema = new Schema({
     items: [
         {
             attachment_id: String,
-            buttonPayload: { type: String, required: true },
-            buttonTitle: { type: String, required: true },
+            buttonPayload: String,
+            buttonTitle: String,
             media_url: String,
             payload: String,
-            type: { type: String, required: true }
+            title: String,
+            type: String
         }
     ],
     title: String,
