@@ -84,9 +84,9 @@ var generalAssetSchema = new Schema({
             buttonPayload: String,
             buttonTitle: String,
             media_url: String,
-            payload: String,
-            title: String,
-            type: String
+            itemPayload: String,
+            itemTitle: String,
+            itemType: String
         }
     ],
     title: String,
