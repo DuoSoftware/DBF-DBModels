@@ -69,20 +69,6 @@ var cardSchema = new Schema({
     updated_at: { type: Date, default: Date.now, require: true }
 });
 
-
-
-var generalAssetSchema = new Schema({
-    description: String,
-    items: [itemSchema],
-    name: String,
-    company: { type: Number, required: true },
-    tenant: { type: Number, required: true },
-    created_at: { type: Date, default: Date.now, require: true },
-    updated_at: { type: Date, default: Date.now, require: true },
-    title: String,
-    type: { type: String, required: true }
-});
-
 var itemSchema = new Schema({
     attachment_id: String,
     buttons: [
@@ -95,6 +81,18 @@ var itemSchema = new Schema({
     itemPayload: String,
     itemTitle: String,
     itemType: String
+});
+
+var generalAssetSchema = new Schema({
+    description: String,
+    items: [itemSchema],
+    name: String,
+    company: { type: Number, required: true },
+    tenant: { type: Number, required: true },
+    created_at: { type: Date, default: Date.now, require: true },
+    updated_at: { type: Date, default: Date.now, require: true },
+    title: String,
+    type: { type: String, required: true }
 });
 
 
