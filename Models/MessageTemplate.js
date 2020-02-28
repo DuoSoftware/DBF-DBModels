@@ -87,8 +87,8 @@ var itemSchema = new Schema({
     attachment_id: String,
     buttons: [
         {
-            buttonTitle: String,
-            buttonPayload: String
+            buttonPayload: String,
+            buttonTitle: String
         }
     ],
     media_url: String,
