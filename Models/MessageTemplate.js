@@ -91,6 +91,7 @@ var generalAssetSchema = new Schema({
     tenant: { type: Number, required: true },
     created_at: { type: Date, default: Date.now, require: true },
     updated_at: { type: Date, default: Date.now, require: true },
+    themeID: String,
     title: String,
     type: { type: String, required: true }
 });
