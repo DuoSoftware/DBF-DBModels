@@ -77,10 +77,10 @@ var itemSchema = new Schema({
             buttonTitle: String
         }
     ],
-    media_url: String,
-    itemPayload: String,
-    itemTitle: String,
-    itemType: String
+    item_url: String,
+    item_payload: String,
+    item_title: String,
+    item_type: String
 });
 
 var generalAssetSchema = new Schema({
