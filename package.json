@@ -1,6 +1,6 @@
 {
   "name": "dbf-dbmodels",
-  "version": "1.0.242",
+  "version": "1.0.243",
   "description": "",
   "main": "MongoConnection.js",
   "dependencies": {
