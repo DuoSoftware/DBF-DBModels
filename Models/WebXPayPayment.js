@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 
 var WebXPayPaymentScheme = new Schema({
-    ID: { type: Number, required: true },
+    ID: { type: String, required: true },
     orderID: { type: String },
     orderRefferenceNumber: { type: String },
     dateTimeTransaction: { type: String },
