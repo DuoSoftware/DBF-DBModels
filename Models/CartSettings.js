@@ -10,7 +10,4 @@ var CartSettingsScheme = new Schema({
     theme: { type: String }
 });
 
-
-CartSettingsScheme.index({ "ID": 1 }, { "unique": true });
-
 module.exports.cartSettings = mongoose.model('cartSettings', CartSettingsScheme);
