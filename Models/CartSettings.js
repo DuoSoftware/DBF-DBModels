@@ -8,6 +8,8 @@ var CartSettingsScheme = new Schema({
     tenant: { type: Number, required: true },
     companyName: { type: String },
     companyLogo: { type: String },
+    cartEditable: { type: String, default: 'false', },
+    shippingAddressNeeded: { type: String, default: 'false' },
     theme: { type: String }
 });
 
