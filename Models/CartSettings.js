@@ -6,6 +6,8 @@ var CartSettingsScheme = new Schema({
     ID: { type: String, required: true },
     company: { type: Number, required: true },
     tenant: { type: Number, required: true },
+    secretkey: { type: String, required: true },
+    publickey: { type: String, required: true },
     companyName: { type: String },
     companyLogo: { type: String },
     cartEditable: { type: String, default: 'false', },
