@@ -14,6 +14,7 @@ var OrderDetailsSchema = new Schema({
     orderStatus: { type: String },
     firstName: { type: String },
     lastName: { type: String },
+    contactNumber: { type: String },
     address: { type: String },
     emailID: { type: String },
     totalAmount: { type: String },
