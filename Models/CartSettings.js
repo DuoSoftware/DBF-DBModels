@@ -16,6 +16,6 @@ var CartSettingsScheme = new Schema({
 });
 
 
-// CartSettingsScheme.index({ "ID": 1 }, { "unique": true });
+CartSettingsScheme.index({ "company": 1 }, { "unique": true });
 
 module.exports.cartSettings = mongoose.model('cartSettings', CartSettingsScheme);
