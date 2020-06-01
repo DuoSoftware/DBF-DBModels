@@ -11,6 +11,7 @@ var CartSettingsScheme = new Schema({
     companyName: { type: String },
     companyLogo: { type: String },
     cartEditable: { type: String, default: 'false', },
+    billingAddressEditable: { type: String, default: 'false' },
     shippingAddressNeeded: { type: String, default: 'false' },
     theme: { type: String }
 });
