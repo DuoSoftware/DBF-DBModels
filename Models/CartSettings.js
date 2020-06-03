@@ -13,6 +13,8 @@ var CartSettingsScheme = new Schema({
     cartEditable: { type: String, default: 'false', },
     billingAddressEditable: { type: String, default: 'false' },
     shippingAddressNeeded: { type: String, default: 'false' },
+    tabName: { type: String, default: 'Cart Checkout' },
+    tabFavicon: { type: String, default: 'https://www.smoothflow.io/wp-content/uploads/2018/09/smoothflow_favicon_01.png' },
     theme: { type: String }
 });
 
